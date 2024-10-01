@@ -1,6 +1,8 @@
-# Ivhan's Portfolio
+# Navi's Portfolio
 
 Welcome to my personal portfolio website built with React.js!
+
+> **Note:** This portfolio is currently under development. Some features may not be fully functional yet. Please stay tuned for updates!
 
 ## 📖 About
 
