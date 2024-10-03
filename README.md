@@ -1,34 +1,18 @@
-# Navi's Portfolio
+# 3D Portfolio
 
-Welcome to my personal portfolio website built with React.js!
+Welcome to the 3D Portfolio project! This project showcases my skills and creativity through an interactive 3D experience. The main focus is on presenting my work in a visually engaging manner using React, Three.js, and React Three Fiber.
 
-> **Note:** This portfolio is currently under development. Some features may not be fully functional yet. Please stay tuned for updates!
 
-## 📖 About
+## Features
 
-This is my personal portfolio where I showcase my projects, skills, and experiences. The website is designed to provide visitors with an insight into my work and professional background.
+- **Interactive 3D Text**: The portfolio features spinning 3D text that showcases my name in a vibrant orange color with a stylish outline.
+- **Manual Rotation**: Users can manually rotate the scene to explore the 3D elements.
+- **Responsive Design**: The layout adapts to different screen sizes, providing a consistent experience across devices.
+- **Dark Background Theme**: A modern dark theme enhances visual aesthetics and makes the content stand out.
 
-## 🌟 Features
+## Technologies Used
 
-- **Responsive Design**: Optimized for viewing on devices of all sizes.
-- **Projects Showcase**: Displays my projects with descriptions and links.
-- **About Me**: A section where I introduce myself and share my background.
-
-## 🛠️ Technologies Used
-
-- **React.js**: JavaScript library for building user interfaces.
-- **CSS**: Styling the components and layout.
-- **HTML**: Structuring the content.
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- **Node.js**: Ensure you have Node.js installed. You can download it from [Node.js Official Website](https://nodejs.org/).
-
-### Installation
-
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/itsmeenavi/Portfolio.git
+- **React**: A JavaScript library for building user interfaces.
+- **Three.js**: A 3D library that makes creating and displaying animated 3D graphics in the browser easier.
+- **React Three Fiber**: A React renderer for Three.js that enables a declarative approach to building 3D scenes.
+- **drei**: A helper library for React Three Fiber that provides useful abstractions and components for easier 3D scene building.
