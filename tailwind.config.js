@@ -5,6 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'custom-yellow': '#ffffce',
+        'custom-teal-dark': '#0d656d',
+        'custom-teal-light': '#a2dfcb',
+        'custom-gray': '#2b3039',
+      },
       keyframes: {
         blink: {
           '0%, 100%': { opacity: 1 },

@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 
-function AboutMe() {
+function Skills() {
   return (
     <section
       id="about-me"
@@ -31,4 +31,4 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default Skills;
