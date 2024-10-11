@@ -44,7 +44,7 @@ function AboutMe() {
         <div className="inline-block text-lg">
           <ReactTypingEffect
             text={[
-              "Hello! I'm Navi, a passionate developer with experience in building web applications using React.js.",
+              "Hello! I'm Ivhan Salazar, an aspiring developer with experience in building mobile and web applications",
             ]}
             speed={50}
             eraseDelay={100000} // Large value to prevent erasing
