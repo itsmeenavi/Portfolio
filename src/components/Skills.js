@@ -1,31 +1,29 @@
-// components/AboutMe.js
+// components/Skills.js
 import React from 'react';
-import ReactTypingEffect from 'react-typing-effect';
 
 function Skills() {
+  const skills = [
+    { name: 'JavaScript', level: 'Advanced' },
+    { name: 'React.js', level: 'Advanced' },
+    { name: 'Node.js', level: 'Intermediate' },
+    { name: 'Tailwind CSS', level: 'Intermediate' },
+    { name: 'Git', level: 'Advanced' },
+    // Add more skills as needed
+  ];
+
   return (
-    <section
-      id="about-me"
-      className="bg-custom-yellow text-custom-gray py-12 px-4 text-center"
-    >
-      <h2 className="text-custom-teal-dark mb-5 text-3xl font-bold">About Me</h2>
-      <div className="inline-block text-lg">
-        <ReactTypingEffect
-          text={[
-            "Hello! I'm Navi, a passionate developer with experience in building web applications using React.js.",
-          ]}
-          speed={50}
-          eraseDelay={100000} // Large value to prevent erasing
-          cursor="_"
-          displayTextRenderer={(text) => {
-            return (
-              <p className="inline m-0">
-                {text}
-                <span className="text-custom-teal-dark animate-blink">|</span>
-              </p>
-            );
-          }}
-        />
+    <section id="skills" className="bg-charcoal-gray text-off-white py-12 px-4">
+      <h2 className="text-teal text-center mb-10 text-3xl font-bold">Skills</h2>
+      <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="bg-rich-black p-5 rounded-lg shadow-lg flex flex-col items-center"
+          >
+            <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
+            <p className="text-teal">{skill.level}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
