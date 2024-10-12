@@ -29,10 +29,10 @@ function SkillsCarousel() {
     <section id="skills" className="bg-rich-black text-off-white py-12 px-4 overflow-hidden">
       <h2 className="text-teal text-center mb-10 text-3xl font-bold">Skills</h2>
       <div className="relative w-3/4 mx-auto overflow-hidden">
-        <div className="flex items-center space-x-8 animate-scroll w-[200%]">
+        <div className="flex items-center space-x-8 animate-scroll w-[200%] ">
           {skills.concat(skills).map((skill, index) => (
-            <div key={index} className="flex flex-col items-center text-5xl">
-              <div>{skill.icon}</div>
+            <div key={index} className="flex flex-col items-center text-5xl ">
+              <div className ="text-teal">{skill.icon}</div>
               <p className="text-sm mt-2">{skill.name}</p>
             </div>
           ))}
