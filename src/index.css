@@ -5,6 +5,10 @@
 
 /* Import Google Fonts if necessary */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* index.css or App.css */
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
 
 /* Apply global styles */
 body {

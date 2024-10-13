@@ -1,12 +1,13 @@
 // App.js
 import React from 'react';
-import './index.css';
+import './index.css'; // Import Tailwind CSS
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
-import SkillsCarousel from './components/SkillsCarousel'; // Import the SkillsCarousel
+import Skills from './components/Skills';
+import Education from './components/Education'; // Import Education component
+import WorkExperience from './components/WorkExperience'; // Import WorkExperience component
 import Projects from './components/Projects';
 import Footer from './components/Footer';
-import WorkExperience from './components/WorkExperience';
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
       <Header />
       <main className="flex-grow">
         <AboutMe />
-        <SkillsCarousel /> {/* Add the SkillsCarousel component */}
+        <Education /> {/* Add Education component */}
+        <WorkExperience /> {/* Add WorkExperience component */}
+        <Skills />
         <Projects />
-        <WorkExperience />
       </main>
       <Footer />
     </div>

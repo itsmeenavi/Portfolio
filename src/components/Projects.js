@@ -16,7 +16,7 @@ function Projects() {
       <h2 className="text-teal text-center mb-10 text-3xl font-bold">
         Projects
       </h2>
-      <div className="flex flex-wrap justify-center">
+      {/* <div className="flex flex-wrap justify-center">
         {projectList.map((project, index) => (
           <div
             className="bg-charcoal-gray border border-teal rounded-lg m-2 p-5 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
@@ -34,7 +34,7 @@ function Projects() {
             </a>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

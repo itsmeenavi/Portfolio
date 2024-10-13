@@ -34,6 +34,33 @@ function Header() {
           </li>
           <li className="md:ml-5">
             <a
+              href="#education"
+              className="text-off-white hover:text-teal block py-2 px-5"
+              onClick={handleToggle}
+            >
+              Education
+            </a>
+          </li>
+          <li className="md:ml-5">
+            <a
+              href="#work-experience"
+              className="text-off-white hover:text-teal block py-2 px-5"
+              onClick={handleToggle}
+            >
+              Work
+            </a>
+          </li>
+          <li className="md:ml-5">
+            <a
+              href="#skills"
+              className="text-off-white hover:text-teal block py-2 px-5"
+              onClick={handleToggle}
+            >
+              Skills
+            </a>
+          </li>
+          <li className="md:ml-5">
+            <a
               href="#projects"
               className="text-off-white hover:text-teal block py-2 px-5"
               onClick={handleToggle}
