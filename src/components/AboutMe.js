@@ -9,7 +9,7 @@ function AboutMe() {
         <div className="w-48 h-48 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
           <img
             src={require('../assets/my-photo.jpg')}
-            alt="Navi"
+            alt="Ivhan Salazar"
             className="w-full h-full object-cover rounded-full border-4 border-teal"
           />
         </div>

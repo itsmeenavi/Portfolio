@@ -11,7 +11,7 @@ function Header() {
   return (
     <header className="bg-rich-black">
       <nav className="flex justify-between items-center py-3 px-5 relative">
-        <div className="text-teal font-bold text-xl">Navi</div>
+        <div className="text-teal font-bold text-xl">Ivhan</div>
         <div
           className="text-off-white cursor-pointer md:hidden"
           onClick={handleToggle}

@@ -5,7 +5,7 @@ import { FaSchool } from 'react-icons/fa';
 function Education() {
   const educationHistory = [
     {
-      institution: 'Sacred Heart Academy',
+      institution: 'Sacred Heart Academy Pasig',
       degree: 'Elementary',
       years: '2008 - 2014',
     },
@@ -15,17 +15,17 @@ function Education() {
       years: '2014 - 2018',
     },
     {
-      institution: 'STI College',
+      institution: 'STI College Global City',
       degree: 'Senior High School',
       years: '2018 - 2020',
     },
     {
-      institution: 'PUP Manila',
+      institution: 'PUP Sta Mesa',
       degree: 'College',
       years: '2020 - 2023',
     },
     {
-      institution: 'LOA',
+      institution: 'Lyceum of Alabang',
       degree: 'College',
       years: '2023 - 2024',
     },
