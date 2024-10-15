@@ -8,6 +8,7 @@ import Education from './components/Education'; // Import Education component
 import WorkExperience from './components/WorkExperience'; // Import WorkExperience component
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import Contact from './components/Contact'; // Import Contact component
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <WorkExperience /> {/* Add WorkExperience component */}
         <Skills />
         <Projects />
+        <Contact /> {/* Add Contact component */}
       </main>
       <Footer />
     </div>
