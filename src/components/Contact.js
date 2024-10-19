@@ -39,8 +39,8 @@ function Contact() {
 
     emailjs
       .send(
-        'service_0nvh3h4',      // Replace with your EmailJS service ID
-        'template_h1zvowo',     // Replace with your EmailJS template ID
+        'service_rjizytq',      // Replace with your EmailJS service ID
+        'template_r1n9a6r',     // Replace with your EmailJS template ID
         formData,
         '41M3Bbo3aIfm44zj-'     // Replace with your EmailJS public key (formerly user ID)
       )
@@ -124,3 +124,4 @@ function Contact() {
 }
 
 export default Contact;
+ 
