@@ -1,11 +1,29 @@
 // components/Header.js
 import React, { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleToggle = () => {
     setNavbarOpen(!navbarOpen);
+  };
+
+  const handleNavigation = (sectionId) => {
+    // If not on the homepage, navigate to it first, then scroll
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
+
+    // Close the navbar (for mobile) and scroll to the section
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // Delay to ensure routing completes before scrolling
   };
 
   return (
@@ -27,7 +45,7 @@ function Header() {
             <a
               href="#about-me"
               className="text-off-white hover:text-teal block py-2 px-5"
-              onClick={handleToggle}
+              onClick={() => handleNavigation('about-me')}
             >
               About Me
             </a>
@@ -36,7 +54,7 @@ function Header() {
             <a
               href="#education"
               className="text-off-white hover:text-teal block py-2 px-5"
-              onClick={handleToggle}
+              onClick={() => handleNavigation('education')}
             >
               Education
             </a>
@@ -45,7 +63,7 @@ function Header() {
             <a
               href="#work-experience"
               className="text-off-white hover:text-teal block py-2 px-5"
-              onClick={handleToggle}
+              onClick={() => handleNavigation('work-experience')}
             >
               Work
             </a>
@@ -54,7 +72,7 @@ function Header() {
             <a
               href="#skills"
               className="text-off-white hover:text-teal block py-2 px-5"
-              onClick={handleToggle}
+              onClick={() => handleNavigation('skills')}
             >
               Skills
             </a>
@@ -63,7 +81,7 @@ function Header() {
             <a
               href="#projects"
               className="text-off-white hover:text-teal block py-2 px-5"
-              onClick={handleToggle}
+              onClick={() => handleNavigation('projects')}
             >
               Projects
             </a>
