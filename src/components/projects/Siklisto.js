@@ -13,7 +13,7 @@ function Siklisto() {
       <div className="flex flex-col items-center">
         <img src={siklistoImage} alt="Siklisto Detail" className="mb-4" />
         <p className="text-off-white text-center max-w-prose">
-        A Mobile Based Electric Bike Charging Station Locator
+        A Mobile Based Electric Bike Charging Station Locator in Metro Manila
         </p>
         {/* Add more images or videos as needed */}
       </div>
