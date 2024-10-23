@@ -24,6 +24,12 @@ function WorkExperience() {
       years: 'Sept 2023 - Feb 2024',
       description:
         'Developed websites using PHP and JavaScript. Designed websites using WordPress CMS with the help of HTML and JavaScript. Created professional presentations for B2B and B2C clients. Designed the full UI/UX of a mobile app using Figma. Initiated development of a mobile application version of the main company product using Flutter Dart. Managed the IT team to be more organized and systematic.',
+    },{
+      company: 'Philippine Statistics Authority',
+      position: 'Systems Developmer Internship',
+      years: 'October 2024 - Current',
+      description:
+        '',
     },
   ];
 
