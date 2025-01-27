@@ -4,6 +4,7 @@ import siklistoImage from '../assets/siklisto.png';
 import loaImage from '../assets/loa.png';
 import bibleImage from '../assets/advice.png';
 import adviceImage from '../assets/bible.png';
+import basicImage from '../assets/basic.png';
 import underconstructionImage from '../assets/underConstruction.jpg';
 
 const projectList = [
@@ -18,15 +19,16 @@ const projectList = [
     name: 'Lyceum of Alabang Performance Evaluation System',
     description: 'Faculty Evaluation System with Sentiment Analysis',
     image: loaImage,
-    link: '/project-2',
+    link: 'https://github.com/LOA-Capstone/eval-system-capstone',
     technologies: ['Html', 'Javascript', 'CSS', 'PHP', 'Python', 'Mysql'],
+    isExternal: true,
   },
   {
     name: 'Random Bible Verse',
     description: 'Generates random bible verses to display',
     image: bibleImage,
     link: 'https://random-bible-verse-flame.vercel.app', // External link
-    technologies: ['Nextjs', 'Tailwind'],
+    technologies: ['Nextjs'],
     isExternal: true, // Mark as external link
   },
   {
@@ -34,15 +36,18 @@ const projectList = [
     description: 'Generates random advices',
     image: adviceImage,
     link: 'https://random-advice-app-seven.vercel.app', // External link
-    technologies: ['Nextjs', 'Tailwind'],
+    technologies: ['Nextjs'],
     isExternal: true, // Mark as external link
   },
   {
-    name: 'Project 5',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: underconstructionImage,
-    link: '/project-4',
+    name: 'Basic Photography Gallery',
+    description: 'A website made for a project in Basic Photography',
+    image: basicImage,
+    link: 'https://basic-photo-finals.vercel.app/photography', // External link
+    technologies: ['ReactJS', 'Tailwind'],
+    isExternal: true, // Mark as external link
   },
+
   // Add more projects as needed
 ];
 

@@ -21,29 +21,38 @@ function Education() {
     },
     {
       institution: 'PUP Sta Mesa',
-      degree: 'College',
+      degree: 'Diploma in Information Technology',
       years: '2020 - 2023',
     },
     {
       institution: 'Lyceum of Alabang',
-      degree: 'College',
-      years: '2023 - 2024',
+      degree: 'Bachelor of Science in Information Technology',
+      years: '2024 - 2025',
     },
   ];
 
   return (
     <section id="education" className="bg-rich-black text-off-white py-12 px-4">
       <h2 className="text-teal text-center mb-10 text-3xl font-bold">Education</h2>
+
       <div className="relative max-w-2xl mx-auto">
-        <div className="border-l-2 border-teal">
+        {/* Vertical timeline line with more left padding */}
+        <div className="border-l-4 border-teal pl-8">
           {educationHistory.map((item, index) => (
-            <div key={index} className="mb-10 ml-8">
-              <div className="absolute -left-4 mt-1.5 text-teal">
-                <FaSchool size={24} />
+            <div key={index} className="relative mb-10 ml-6">
+              {/* Icon in a teal circle, moved further left */}
+              <div className="absolute -left-10 top-1 flex items-center justify-center w-8 h-8 bg-teal rounded-full">
+                <FaSchool size={16} className="text-rich-black" />
               </div>
-              <p className="text-sm text-off-white">{item.years}</p>
+
+              {/* Years */}
+              <p className="text-sm mb-1">{item.years}</p>
+
+              {/* Institution Name */}
               <h3 className="text-lg font-semibold text-teal">{item.institution}</h3>
-              <p className="text-base text-off-white">{item.degree}</p>
+
+              {/* Degree/Level */}
+              <p className="text-base">{item.degree}</p>
             </div>
           ))}
         </div>

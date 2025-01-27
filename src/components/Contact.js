@@ -38,13 +38,18 @@ function Contact() {
 
     // **2. Send Email via EmailJS**
 
-    emailjs
-      .send(
-        'service_rjizytq',      // Replace with your EmailJS service ID
-        'template_r1n9a6r',     // Replace with your EmailJS template ID
-        formData,
-        '41M3Bbo3aIfm44zj-'     // Replace with your EmailJS public key (formerly user ID)
-      )
+    emailjs.send(
+      'service_0nvh3h4',
+      'template_r1n9a6r',
+      {
+        to_name: 'My Name',        // or any recipient name you want
+        from_name: formData.name,  // matches {{from_name}} in template
+        message: formData.message, // matches {{message}} in template
+        reply_to: formData.email,  // if you want a reply-to field
+        subject: formData.subject, // if your template uses {{subject}}
+      },
+      '41M3Bbo3aIfm44zj-'
+    )
       .then(
         (result) => {
           console.log(result.text);
