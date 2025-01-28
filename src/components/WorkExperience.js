@@ -35,33 +35,18 @@ function WorkExperience() {
   ];
 
   return (
-    <section id="work-experience" className="bg-charcoal-gray text-off-white py-12 px-4">
-      <h2 className="text-teal text-center mb-10 text-3xl font-bold">Work Experience</h2>
+    <section id="work-experience" className="bg-rich-black text-off-white py-12 px-4">
+      <h2 className="text-3xl font-bold text-teal text-center mb-10">Work Experience</h2>
 
-      <div className="relative max-w-2xl mx-auto">
-        {/* Vertical timeline line with more left padding */}
-        <div className="border-l-4 border-teal pl-8">
-          {workExperiences.map((item, index) => (
-            <div key={index} className="relative mb-10 ml-6">
-              {/* Icon in a teal circle, moved further left */}
-              <div className="absolute -left-10 top-1 flex items-center justify-center w-8 h-8 bg-teal rounded-full">
-                <FaBriefcase size={16} className="text-rich-black" />
-              </div>
-
-              {/* Year/Duration */}
-              <p className="text-sm mb-1">{item.years}</p>
-
-              {/* Company Name */}
-              <h3 className="text-lg font-semibold text-teal">{item.company}</h3>
-
-              {/* Position/Role */}
-              <p className="text-base">{item.position}</p>
-
-              {/* Description */}
-              <p className="text-sm mt-2 leading-relaxed">{item.description}</p>
-            </div>
-          ))}
-        </div>
+      <div className="timeline">
+        {workExperiences.map((item, index) => (
+          <div key={index} className="timeline-item">
+            <span className="years">{item.years}</span>
+            <h3>{item.company}</h3>
+            <p>{item.position}</p>
+            <p className="description">{item.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

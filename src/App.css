@@ -23,3 +23,213 @@ a:hover {
 section {
   flex: 1;
 }
+/* Flip Card Styles */
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.flip-card-front {
+  background: linear-gradient(145deg, #2d3748, #1a202c); /* Gradient background */
+  border: 2px solid rgba(56, 178, 172, 0.2); /* Semi-transparent teal border */
+}
+
+.flip-card-front:hover {
+  border-color: #38b2ac; /* Solid teal border on hover */
+  transform: scale(1.02); /* Slight scale-up effect on hover */
+}
+
+.flip-card-back {
+  background: linear-gradient(145deg, #38b2ac, #2c7a7b); /* Gradient background */
+  border: 2px solid rgba(56, 178, 172, 0.2); /* Semi-transparent teal border */
+  transform: rotateY(180deg);
+}
+
+.flip-card-back:hover {
+  border-color: #38b2ac; /* Solid teal border on hover */
+  transform: rotateY(180deg) scale(1.02); /* Slight scale-up effect on hover */
+}
+
+/* Project Card Styles */
+.project-card {
+  perspective: 1000px;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 16px rgba(56, 178, 172, 0.3); /* Teal shadow on hover */
+}
+
+/* Image Styles */
+.project-card img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Technology Tag Styles */
+.project-card span {
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card span:hover {
+  background-color: #38b2ac; /* Teal background on hover */
+  color: #1a202c; /* Dark text on hover */
+}
+
+
+/* Education Section Styles */
+#education {
+  
+  color: #FFFFFF;
+  padding: 4rem 1rem;
+}
+
+#education h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #38b2ac; /* Teal color for the heading */
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#education h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #38b2ac;
+  margin: 0.5rem auto 0;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #38b2ac;
+  border-radius: 2px;
+}
+
+/* Timeline Item Styles */
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #38b2ac;
+  border-radius: 50%;
+  border: 3px solid #000000;
+  z-index: 1;
+}
+
+.timeline-item:hover::before {
+  background-color: #2c7a7b; /* Darker teal on hover */
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.timeline-item .years {
+  font-size: 0.875rem;
+  color: #38b2ac;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.timeline-item h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #38b2ac;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+/* Hover Effects */
+.timeline-item:hover {
+  transform: translateX(10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover h3 {
+  color: #2c7a7b; /* Darker teal on hover */
+  transition: color 0.3s ease-in-out;
+}
+
+
+/* Work Experience Section Styles */
+#work-experience {
+  color: #FFFFFF;
+  padding: 4rem 1rem;
+}
+
+#work-experience h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #38b2ac; /* Teal color for the heading */
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#work-experience h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #38b2ac;
+  margin: 0.5rem auto 0;
+}

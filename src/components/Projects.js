@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import siklistoImage from '../assets/siklisto.png';
 import loaImage from '../assets/loa.png';
-import bibleImage from '../assets/advice.png';
-import adviceImage from '../assets/bible.png';
+import adviceImage from '../assets/advice.png';
+import bibleImage from '../assets/bible.png';
 import basicImage from '../assets/basic.png';
 import underconstructionImage from '../assets/underConstruction.jpg';
+import '../App.css'; // Import the CSS file
 
 const projectList = [
   {
@@ -32,8 +33,8 @@ const projectList = [
     isExternal: true, // Mark as external link
   },
   {
-    name: 'Random Advice Genederator',
-    description: 'Generates random advices',
+    name: 'Random Advice Generator',
+    description: 'Generates random advice',
     image: adviceImage,
     link: 'https://random-advice-app-seven.vercel.app', // External link
     technologies: ['Nextjs'],
@@ -47,7 +48,6 @@ const projectList = [
     technologies: ['ReactJS', 'Tailwind'],
     isExternal: true, // Mark as external link
   },
-
   // Add more projects as needed
 ];
 
@@ -78,13 +78,13 @@ function Projects() {
               return (
                 <CardWrapper
                   key={index}
-                  className="bg-charcoal-gray border border-teal rounded-lg p-5 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 hover:shadow-lg transition-shadow duration-300 flex flex-col items-center"
+                  className="project-card bg-charcoal-gray border border-teal/20 rounded-lg p-5 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 hover:shadow-xl transition-all duration-300 flex flex-col items-center transform hover:scale-105 hover:border-teal"
                   {...cardProps}
                 >
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="w-full h-auto rounded mb-4 object-cover"
+                    className="w-full h-48 object-cover rounded-lg mb-4"
                   />
                   <h3 className="text-teal text-xl font-semibold text-center">{project.name}</h3>
                   <p className="mt-2 text-off-white text-center">{project.description}</p>
@@ -94,7 +94,7 @@ function Projects() {
                       {project.technologies.map((tech, idx) => (
                         <span
                           key={idx}
-                          className="text-off-white text-sm border border-teal rounded-full px-3 py-1"
+                          className="text-off-white text-sm border border-teal rounded-full px-3 py-1 hover:bg-teal hover:text-rich-black transition-colors duration-200"
                         >
                           {tech}
                         </span>
