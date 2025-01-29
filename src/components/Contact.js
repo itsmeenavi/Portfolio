@@ -4,7 +4,18 @@ import { Send, CheckCircle, AlertCircle, Loader } from 'lucide-react';
 import contactImage from '../assets/contact-me.png';
 
 // Reusable Input Component
-const InputField = ({ type, name, value, onChange, onFocus, onBlur, focused, error, label, isTextArea = false }) => {
+const InputField = ({
+  type,
+  name,
+  value,
+  onChange,
+  onFocus,
+  onBlur,
+  focused,
+  error,
+  label,
+  isTextArea = false,
+}) => {
   const inputClasses = `
     w-full p-4 rounded-lg bg-rich-black text-off-white
     border-2 transition-all duration-300
@@ -15,7 +26,7 @@ const InputField = ({ type, name, value, onChange, onFocus, onBlur, focused, err
 
   return (
     <div className="relative mb-6">
-      <label 
+      <label
         className={`absolute left-4 transition-all duration-300 ${
           focused || value
             ? '-top-3 text-sm text-teal bg-rich-black px-2'
@@ -24,7 +35,7 @@ const InputField = ({ type, name, value, onChange, onFocus, onBlur, focused, err
       >
         {label}
       </label>
-      
+
       {isTextArea ? (
         <textarea
           name={name}
@@ -46,7 +57,7 @@ const InputField = ({ type, name, value, onChange, onFocus, onBlur, focused, err
           onBlur={onBlur}
         />
       )}
-      
+
       {error && (
         <p className="text-red-500 text-sm mt-1 flex items-center">
           <AlertCircle className="w-4 h-4 mr-1" />
@@ -62,33 +73,35 @@ function Contact() {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
-  
+
   const [focused, setFocused] = useState({
     name: false,
     email: false,
     subject: false,
-    message: false
+    message: false,
   });
-  
+
   const [status, setStatus] = useState('idle');
   const [errors, setErrors] = useState({});
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
+  // Validation logic
   const validateField = (name, value) => {
     let error = '';
     switch (name) {
       case 'name':
-        if (value.length < 2) error = 'Name must be at least 2 characters';
+        if (value.trim().length < 2) error = 'Name must be at least 2 characters';
         break;
       case 'email':
         if (!/\S+@\S+\.\S+/.test(value)) error = 'Please enter a valid email';
         break;
       case 'subject':
-        if (value.length < 3) error = 'Subject must be at least 3 characters';
+        if (value.trim().length < 3) error = 'Subject must be at least 3 characters';
         break;
       case 'message':
-        if (value.length < 10) error = 'Message must be at least 10 characters';
+        if (value.trim().length < 10) error = 'Message must be at least 10 characters';
         break;
       default:
         break;
@@ -96,37 +109,55 @@ function Contact() {
     return error;
   };
 
+  // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setErrors(prev => ({ ...prev, [name]: validateField(name, value) }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // If the user has already submitted once, we validate onChange for *only this field*
+    if (hasSubmitted) {
+      const error = validateField(name, value);
+      setErrors((prevErrors) => {
+        if (error) {
+          return { ...prevErrors, [name]: error };
+        } else {
+          // remove the error for this field if it’s now valid
+          const { [name]: _, ...rest } = prevErrors;
+          return rest;
+        }
+      });
+    }
   };
 
-  const handleFocus = (name) => {
-    setFocused(prev => ({ ...prev, [name]: true }));
+  // Manage floating label focus
+  const handleFocus = (field) => {
+    setFocused((prev) => ({ ...prev, [field]: true }));
+  };
+  const handleBlur = (field) => {
+    setFocused((prev) => ({ ...prev, [field]: false }));
   };
 
-  const handleBlur = (name) => {
-    setFocused(prev => ({ ...prev, [name]: false }));
-    setErrors(prev => ({ ...prev, [name]: validateField(name, formData[name]) }));
-  };
-
+  // Validate all fields on submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
+    // Let the code know user has attempted submission
+    setHasSubmitted(true);
+
+    // Validate all fields at once
     const newErrors = {};
-    Object.keys(formData).forEach(key => {
+    Object.keys(formData).forEach((key) => {
       const error = validateField(key, formData[key]);
       if (error) newErrors[key] = error;
     });
-    
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
 
+    // If no errors, proceed to send
     setStatus('loading');
-
     try {
       await emailjs.send(
         'service_0nvh3h4',
@@ -140,9 +171,10 @@ function Contact() {
         },
         '41M3Bbo3aIfm44zj-'
       );
-      
+
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
+      setErrors({});
       setTimeout(() => setStatus('idle'), 3000);
     } catch (error) {
       setStatus('error');
@@ -157,9 +189,9 @@ function Contact() {
           {/* Left Side - Image with Animation */}
           <div className="relative group">
             <div className="overflow-hidden rounded-2xl">
-              <img 
-                src={contactImage} 
-                alt="Contact Me" 
+              <img
+                src={contactImage}
+                alt="Contact Me"
                 className="w-full h-auto transform transition-transform duration-700 group-hover:scale-110"
               />
             </div>
@@ -175,21 +207,53 @@ function Contact() {
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {Object.keys(formData).map((field) => (
-                <InputField
-                  key={field}
-                  type={field === 'email' ? 'email' : 'text'}
-                  name={field}
-                  value={formData[field]}
-                  onChange={handleChange}
-                  onFocus={() => handleFocus(field)}
-                  onBlur={() => handleBlur(field)}
-                  focused={focused[field]}
-                  error={errors[field]}
-                  label={field.charAt(0).toUpperCase() + field.slice(1)}
-                  isTextArea={field === 'message'}
-                />
-              ))}
+              <InputField
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                onFocus={() => handleFocus('name')}
+                onBlur={() => handleBlur('name')}
+                focused={focused.name}
+                error={errors.name}
+                label="Name"
+              />
+
+              <InputField
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                onFocus={() => handleFocus('email')}
+                onBlur={() => handleBlur('email')}
+                focused={focused.email}
+                error={errors.email}
+                label="Email"
+              />
+
+              <InputField
+                type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                onFocus={() => handleFocus('subject')}
+                onBlur={() => handleBlur('subject')}
+                focused={focused.subject}
+                error={errors.subject}
+                label="Subject"
+              />
+
+              <InputField
+                isTextArea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                onFocus={() => handleFocus('message')}
+                onBlur={() => handleBlur('message')}
+                focused={focused.message}
+                error={errors.message}
+                label="Message"
+              />
 
               <button
                 type="submit"
@@ -198,20 +262,28 @@ function Contact() {
                   w-full p-4 rounded-lg font-bold text-lg
                   transition-all duration-300
                   flex items-center justify-center gap-2
-                  ${status === 'loading' 
-                    ? 'bg-gray-500 cursor-wait'
-                    : 'bg-teal hover:bg-teal-dark'
+                  ${
+                    status === 'loading'
+                      ? 'bg-gray-500 cursor-wait'
+                      : 'bg-teal hover:bg-teal-dark'
                   }
                 `}
               >
                 {status === 'loading' && <Loader className="w-5 h-5 animate-spin" />}
                 {status === 'success' && <CheckCircle className="w-5 h-5" />}
                 {status === 'error' && <AlertCircle className="w-5 h-5" />}
-                
-                {status === 'loading' ? 'Sending...' :
-                 status === 'success' ? 'Message Sent!' :
-                 status === 'error' ? 'Error Sending' :
-                 <>Send Message <Send className="w-5 h-5" /></>}
+
+                {status === 'loading'
+                  ? 'Sending...'
+                  : status === 'success'
+                  ? 'Message Sent!'
+                  : status === 'error'
+                  ? 'Error Sending'
+                  : (
+                    <>
+                      Send Message <Send className="w-5 h-5" />
+                    </>
+                  )}
               </button>
             </form>
           </div>

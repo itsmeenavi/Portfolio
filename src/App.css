@@ -1,3 +1,5 @@
+/* Add a modern font (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 /* App.css */
 body {
   margin: 0;
@@ -68,7 +70,7 @@ section {
 }
 
 .flip-card-back {
-  background: linear-gradient(145deg, #38b2ac, #2c7a7b); /* Gradient background */
+ 
   border: 2px solid rgba(56, 178, 172, 0.2); /* Semi-transparent teal border */
   transform: rotateY(180deg);
 }
@@ -78,6 +80,15 @@ section {
   transform: rotateY(180deg) scale(1.02); /* Slight scale-up effect on hover */
 }
 
+/* Typography */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hover Effects */
+.group:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
 /* Project Card Styles */
 .project-card {
   perspective: 1000px;
@@ -232,4 +243,35 @@ section {
   height: 3px;
   background-color: #38b2ac;
   margin: 0.5rem auto 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
 }
