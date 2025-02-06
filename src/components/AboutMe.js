@@ -48,7 +48,7 @@ function AboutMe() {
           {/* Call-to-Action Button (Optional) with Hover Effect */}
           <div className="animate-fade-in-up delay-400">
             <a
-              href="/Ivhan Resume Final.pdf"
+              href="/Ivhan Salazar Resume Final.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-teal text-rich-black font-bold py-2 px-4 rounded hover:bg-teal-dark transition-colors transform hover:scale-105"
