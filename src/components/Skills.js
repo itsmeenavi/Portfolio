@@ -12,6 +12,7 @@ import {
   FaSass,
   FaWordpress,
   FaGitAlt,
+  FaRegWindowMaximize,  // Form-like representation for VB.NET
 } from 'react-icons/fa';
 import {
   SiC,
@@ -19,9 +20,11 @@ import {
   SiDart,
   SiFirebase,
   SiFlutter,
-  SiMysql,
   SiTailwindcss,
   SiFigma,
+  SiCanva,
+  SiOdoo,
+  SiMysql
 } from 'react-icons/si';
 import '../App.css'; // Import the CSS file
 
@@ -47,6 +50,11 @@ function Skills() {
     { name: 'Git', icon: <FaGitAlt size={60} color="#F05032" />, description: 'Intermediate' },
     { name: 'WordPress', icon: <FaWordpress size={60} color="#21759B" />, description: 'Intermediate' },
     { name: 'Figma', icon: <SiFigma size={60} color="#F24E1E" />, description: 'Advanced' },
+    { name: 'VB.NET', icon: <FaRegWindowMaximize size={60} color="#0089B3" />, description: 'Novice' },
+    { name: 'Next.js', icon: <FaJsSquare size={60} color="#000000" />, description: 'Beginner' },
+    { name: 'Canva', icon: <SiCanva size={60} color="#00C4CC" />, description: 'Expert' },  // Canva set to Expert
+    { name: 'AJAX', icon: <FaJsSquare size={60} color="#0070C9" />, description: 'Novice' },
+    { name: 'Odoo ERP', icon: <SiOdoo size={60} color="#68C0B4" />, description: 'Novice' },
   ];
 
   // Define the color mapping for skill levels (darker/muted colors)

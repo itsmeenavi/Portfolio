@@ -28,11 +28,7 @@ function AboutMe() {
 
           {/* Paragraph with Animation */}
           <p className="text-lg leading-relaxed mb-6 animate-fade-in-up delay-200">
-            An aspiring technopreneur with excellent communication skills and a strong work ethic.
-            I possess solid leadership capabilities and a strategic mindset for managing tasks and responsibilities.
-            I'm highly competitive and committed to delivering the best possible outcomes on every project I undertake. 
-            When the stakes are high, I prioritize my work to ensure success.
-          </p>
+          I am an aspiring software developer with a keen focus on delivering top-tier quality in every application I test, consistently striving for perfection. I bring strong leadership abilities and a competitive drive to each project, always pushing myself to achieve the best possible outcomes. With excellent communication skills and a solid work ethic, I approach every task with meticulous attention to detail, dedicating myself to meeting the high standards and demands of each challenge.          </p>
 
           {/* Skills Summary (Optional) with Animation */}
           <div className="mb-6 animate-fade-in-up delay-300">
