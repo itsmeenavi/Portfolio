@@ -27,7 +27,8 @@ function AboutMe() {
           </h3>
 
           <p className="text-lg leading-relaxed mb-6 animate-fade-in-up delay-200">
-            I am an aspiring software developer with a keen focus on delivering top-tier quality...
+          I am an aspiring software developer with a keen focus on delivering top-tier quality in every application I test, consistently striving for perfection. I bring strong leadership abilities and a competitive drive to each project, always pushing myself to achieve the best possible outcomes. With excellent communication skills and a solid work ethic, I approach every task with meticulous attention to detail, dedicating myself to meeting the high standards and demands of each challenge.       
+
           </p>
 
           <div className="mb-6 animate-fade-in-up delay-300">
