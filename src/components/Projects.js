@@ -5,6 +5,7 @@ import loaImage from '../assets/loa.png';
 import adviceImage from '../assets/advice.png';
 import bibleImage from '../assets/bible.png';
 import basicImage from '../assets/basic.png';
+import notepadAppImage from '../assets/notepad.png';
 import underconstructionImage from '../assets/underConstruction.jpg';
 import '../App.css'; // Import the CSS file
 
@@ -47,6 +48,14 @@ const projectList = [
     link: 'https://basic-photo-finals.vercel.app/photography', // External link
     technologies: ['ReactJS', 'Tailwind'],
     isExternal: true, // Mark as external link
+  },
+  {
+    name: 'Notepad App',
+    description: 'Allows users to create temporary, shareable notes with an expiration time.',
+    image: notepadAppImage, // Make sure to define and import this image variable
+    link: 'https://notepad-app-eight.vercel.app',
+    technologies: ['Next.js', 'Tailwind CSS', 'Upstash KV', 'Redis'],
+    isExternal: true,
   },
   // Add more projects as needed
 ];
