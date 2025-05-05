@@ -6,6 +6,7 @@ import adviceImage from '../assets/advice.png';
 import bibleImage from '../assets/bible.png';
 import basicImage from '../assets/basic.png';
 import notepadAppImage from '../assets/notepad.png';
+import worldTimezoneImage from '../assets/worldtimezone.png';
 import underconstructionImage from '../assets/underConstruction.jpg';
 import '../App.css'; // Import the CSS file
 
@@ -55,6 +56,14 @@ const projectList = [
     image: notepadAppImage, // Make sure to define and import this image variable
     link: 'https://notepad-app-eight.vercel.app',
     technologies: ['Next.js', 'Tailwind CSS', 'Upstash KV', 'Redis'],
+    isExternal: true,
+  },
+  {
+    name: 'World Timezone',
+    description: 'See different timezones around the world simultaneously',
+    image: worldTimezoneImage, // Make sure to define and import this image variable
+    link: 'https://world-timezone-gamma.vercel.app',
+    technologies: ['ReactJS', 'Tailwind CSS'],
     isExternal: true,
   },
   // Add more projects as needed
