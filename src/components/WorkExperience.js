@@ -32,13 +32,13 @@ function WorkExperience() {
       description:
         'Gained in-depth exposure to PSA’s operations and the BRAMS/BRAP Project through multiple workshops and meetings. Strengthened JavaScript proficiency by completing a full course, which covered essential concepts such as HTTP vs. HTTPS, encryption, and hashing. Simultaneously, advanced skills in Golang by studying various courses and setting up local client-server connections. Contributed to UI/UX design discussions for the BRAP application and documented technical insights during project sessions. Expanded front-end capabilities by learning ReactJS (including API fetching) and explored modern web technologies such as Next.js and Supabase for streamlined development workflows. Enhanced mobile development expertise with Flutter while gaining hands-on experience initializing projects with PostgreSQL and npm-based toolchains.',
     },
-    // {
-    //   company: 'Fundamental IT Solutions',
-    //   position: 'Junior Frontend Developer',
-    //   years: 'April 2025 - Current',
-    //   description:
-    //     '',
-    // },
+    {
+      company: 'Fundamental IT Solutions',
+      position: 'Junior Frontend Developer',
+      years: 'April 2025 - Current',
+      description:
+        '',
+    },
   ];
 
   return (
