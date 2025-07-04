@@ -7,10 +7,36 @@ import bibleImage from '../assets/bible.png';
 import basicImage from '../assets/basic.png';
 import notepadAppImage from '../assets/notepad.png';
 import worldTimezoneImage from '../assets/worldtimezone.png';
+import anehantechImage from '../assets/anehanit.png';
+import anehansiteImage from '../assets/anehan.png';
 import underconstructionImage from '../assets/underConstruction.jpg';
 import '../App.css'; // Import the CSS file
 
 const projectList = [
+  {
+    name: 'Anehan',
+    description: 'A B2B mobile platform connecting palay farmers with rice millers and retailers in Central Luzon',
+    image: anehansiteImage, // Make sure to define and import this image variable
+    link: 'https://anehan.vercel.app',
+    technologies: ['ReactJS', 'Tailwind CSS', 'Material UI'],
+    isExternal: true,
+  },
+  {
+    name: 'Anehan IT Solutions',
+    description: 'A software development team dedicated to building innovative solutions from concept to deployment.',
+    image: anehantechImage, // Make sure to define and import this image variable
+    link: 'https://anehan-tech.vercel.app',
+    technologies: ['ReactJS', 'Tailwind CSS', 'Material UI'],
+    isExternal: true,
+  },
+  {
+    name: 'Basic Photography Gallery',
+    description: 'A website made for a project in Basic Photography',
+    image: basicImage,
+    link: 'https://basic-photo-finals.vercel.app/photography', // External link
+    technologies: ['ReactJS', 'Tailwind'],
+    isExternal: true, // Mark as external link
+  },
   {
     name: 'Siklisto',
     description: 'A Mobile Based Electric Bike Charging Station Locator',
@@ -18,14 +44,8 @@ const projectList = [
     link: '/siklisto',
     technologies: ['Flutter', 'Dart', 'Firebase'],
   },
-  {
-    name: 'Lyceum of Alabang Performance Evaluation System',
-    description: 'Faculty Evaluation System with Sentiment Analysis',
-    image: loaImage,
-    link: 'https://github.com/LOA-Capstone/eval-system-capstone',
-    technologies: ['Html', 'Javascript', 'CSS', 'PHP', 'Python', 'Mysql'],
-    isExternal: true,
-  },
+  
+
   {
     name: 'Random Bible Verse',
     description: 'Generates random bible verses to display',
@@ -43,12 +63,12 @@ const projectList = [
     isExternal: true, // Mark as external link
   },
   {
-    name: 'Basic Photography Gallery',
-    description: 'A website made for a project in Basic Photography',
-    image: basicImage,
-    link: 'https://basic-photo-finals.vercel.app/photography', // External link
-    technologies: ['ReactJS', 'Tailwind'],
-    isExternal: true, // Mark as external link
+    name: 'Lyceum of Alabang Performance Evaluation System',
+    description: 'Faculty Evaluation System with Sentiment Analysis',
+    image: loaImage,
+    link: 'https://github.com/LOA-Capstone/eval-system-capstone',
+    technologies: ['Html', 'Javascript', 'CSS', 'PHP', 'Python', 'Mysql'],
+    isExternal: true,
   },
   {
     name: 'Notepad App',
@@ -66,6 +86,8 @@ const projectList = [
     technologies: ['ReactJS', 'Tailwind CSS'],
     isExternal: true,
   },
+
+
   // Add more projects as needed
 ];
 

@@ -23,18 +23,18 @@ function AboutMe() {
             Ivhan Salazar
           </h2>
           <h3 className="text-xl text-off-white/80 mb-4 italic animate-fade-in-up delay-100">
-            Aspiring Full Stack Developer
+            Web Developer
           </h3>
 
           <p className="text-lg leading-relaxed mb-6 animate-fade-in-up delay-200">
-          I am an aspiring software developer with a keen focus on delivering top-tier quality in every application I test, consistently striving for perfection. I bring strong leadership abilities and a competitive drive to each project, always pushing myself to achieve the best possible outcomes. With excellent communication skills and a solid work ethic, I approach every task with meticulous attention to detail, dedicating myself to meeting the high standards and demands of each challenge.       
+          I am a software developer with a keen focus on delivering top-tier quality in every application I test, consistently striving for perfection. I bring strong leadership abilities and a competitive drive to each project, always pushing myself to achieve the best possible outcomes. With excellent communication skills and a solid work ethic, I approach every task with meticulous attention to detail, dedicating myself to meeting the high standards and demands of each challenge.       
 
           </p>
 
           <div className="mb-6 animate-fade-in-up delay-300">
             <h4 className="text-teal font-semibold mb-2">Core Skills:</h4>
             <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>React, WordPress, and Flutter</li>
+              <li>React, Nextjs, WordPress, and Flutter</li>
               <li>UI/UX Design with Figma</li>
               <li>Networking & Server Configuration</li>
               <li>Leadership & Project Management</li>
